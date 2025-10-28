@@ -38,7 +38,7 @@ git clone https://github.com/SATHIYAMURTHY-GIT/chat-application.git
 cd chat-application
 Or manually download the project ZIP from GitHub and extract it.
 
-Step 2: Create a Virtual Environment (Optional but Recommended)
+### Step 2: Create a Virtual Environment (Optional but Recommended)
 python -m venv venv
 
 
@@ -53,7 +53,7 @@ Mac/Linux:
 
 source venv/bin/activate
 
-Step 3: Install Required Packages
+### Step 3: Install Required Packages
 pip install flask flask-socketio eventlet
 
 
@@ -63,7 +63,7 @@ flask-socketio → real-time messaging
 
 eventlet → asynchronous server
 
-Step 4: Run the Application
+### Step 4: Run the Application
 python app.py
 
 
@@ -72,7 +72,7 @@ http://127.0.0.1:5000/ or http://localhost:5000/
 
 Open the URL in a browser.
 
-Step 5: Start Chatting
+### Step 5: Start Chatting
 
 Enter your name (or leave empty for anonymous)
 
@@ -82,7 +82,7 @@ If you enter an image URL, it will be displayed as an image in the chat
 
 Open the same URL in multiple browser tabs to see real-time messages between users
 
-Step 6: Optional – Push Changes to GitHub
+### Step 6: Optional – Push Changes to GitHub
 
 After making changes:
 
