@@ -1,101 +1,103 @@
-# 🚀 Real-Time Chat Application with Flask & Socket.IO
+# Chat Application
 
-## 📖 Description
+A simple real-time chat application built with Flask and Flask-SocketIO. Messages are exchanged in real time between clients and the server. Image URLs ending with .jpg, .png or .gif are displayed inline.
 
-This project is a **real-time web chat application** built using:
-
-- **Python Flask**: Backend web framework  
-- **Flask-SocketIO**: Enables real-time bi-directional communication between clients and server  
-- **HTML / CSS / JS**: Frontend interface with a chat window, username input, message input, and dark/light mode toggle  
-
----
-
-## ✨ Features
-
-- Users can join the chat with a name or anonymously  
-- Messages are displayed in **real-time** to all connected users  
-- Each user’s messages appear on the **right**, others’ on the **left**  
-- Messages are **color-coded** per user  
-- Supports **image URLs**; if a message contains an image URL (ending with `.jpg`, `.png`, `.gif`), it is displayed as an image  
-- **Dark/Light mode toggle** for better UX  
+## Features
+- Real-time messaging (Flask + Flask-SocketIO)
+- Image URL preview for direct image links
+- Dark / Light mode toggle
+- Messages color-coded and aligned for readability
+- Works in modern browsers (Chrome, Firefox, Edge)
 
 ---
 
-## 💻 How to Implement on Your System
+## Prerequisites
+- Python 3.8+
+- Git (optional, for cloning the repo)
 
-### Prerequisites
+---
 
-- **Python 3.x** installed (`python --version` or `python3 --version`)  
-- **pip** (Python package installer)  
-- **Git** (optional, if you want to clone from GitHub)  
+## Installation & Run (recommended)
 
-### Step 1: Clone or Download the Project
-
-**With Git:**
-
+1. Clone the repository (or download and extract the ZIP):
 ```bash
 git clone https://github.com/SATHIYAMURTHY-GIT/chat-application.git
 cd chat-application
-Or manually download the project ZIP from GitHub and extract it.
+```
 
-### Step 2: Create a Virtual Environment (Optional but Recommended)
+2. (Optional but recommended) Create and activate a virtual environment:
+
+Windows (PowerShell):
+```powershell
 python -m venv venv
+venv\Scripts\Activate.ps1
+```
 
-
-Activate it:
-
-Windows:
-
+Windows (cmd.exe):
+```cmd
+python -m venv venv
 venv\Scripts\activate
+```
 
-
-Mac/Linux:
-
+macOS / Linux:
+```bash
+python -m venv venv
 source venv/bin/activate
+```
 
-### Step 3: Install Required Packages
+3. Install required packages:
+```bash
 pip install flask flask-socketio eventlet
+```
 
+(Alternatively you can create a `requirements.txt` with:
+```
+flask
+flask-socketio
+eventlet
+```
+and run `pip install -r requirements.txt`.)
 
-flask → backend web framework
-
-flask-socketio → real-time messaging
-
-eventlet → asynchronous server
-
-### Step 4: Run the Application
+4. Run the application:
+```bash
 python app.py
+```
 
+By default the app will be available at:
+- http://127.0.0.1:5000/
+- or http://localhost:5000/
 
-The app will run on:
-http://127.0.0.1:5000/ or http://localhost:5000/
+Open the URL in multiple browser tabs to test real-time messaging.
 
-Open the URL in a browser.
+---
 
-### Step 5: Start Chatting
+## Usage
+- Enter your name (leave empty to use "Anonymous")
+- Type a message and send
+- If you enter a direct image URL ending with `.jpg`, `.jpeg`, `.png`, or `.gif`, it will be displayed as an image in the chat
+- Toggle dark/light mode using the switch at the top-right
 
-Enter your name (or leave empty for anonymous)
+---
 
-Type your message
-
-If you enter an image URL, it will be displayed as an image in the chat
-
-Open the same URL in multiple browser tabs to see real-time messages between users
-
-### Step 6: Optional – Push Changes to GitHub
-
-After making changes:
-
+## Notes & Tips
+- Image URLs must be direct links to an image resource and typically end with `.jpg`, `.jpeg`, `.png`, or `.gif`.
+- If you see issues with concurrent connections, ensure you're running with `eventlet` (it is installed and used by Flask-SocketIO in this project).
+- If you make changes, you can push them back to GitHub:
+```bash
 git add .
-git commit -m "Initial commit"
+git commit -m "Describe your change"
 git push -u origin main
+```
 
-📝 Notes
+---
 
-Works on any modern browser (Chrome, Firefox, Edge)
+## Troubleshooting
+- "Socket connection failed": check browser console and server logs; confirm server is running on the expected host/port.
+- "Image not displayed": verify the URL is a direct image link (ends with `.jpg`, `.jpeg`, `.png`, or `.gif`) and is accessible from your browser.
 
-Messages are color-coded and aligned for better readability
+---
 
-Dark/light mode is toggled via the switch on the top-right corner
-
-Image URLs must be direct links ending with .jpg, .png, or .gif
+If you'd like, I can:
+- Add a `requirements.txt`
+- Create a short CONTRIBUTING guide
+- Add a simple systemd or Procfile example for deployment
